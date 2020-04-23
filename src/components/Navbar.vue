@@ -1,6 +1,6 @@
 <template>
-    <div class="header">
-      <b-navbar toggleable="md" type="dark"  variant="warning" class="transparent">
+    <div class="header dropdownFix" >
+      <b-navbar toggleable="lg" type="dark"  variant="warning" class="transparent">
         <b-navbar-brand href="#">Don Quizotee</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -23,6 +23,11 @@
 </template>
 
 <style scoped>
+  .dropdownFix{
+    position:fixed;
+    width: 100vw;
+  }
+
   .link{
     color: white;
     margin: 0 1em;
@@ -37,7 +42,11 @@
     font-size: 16px;
   }
 
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 990px) {
+    .dropdownFix{
+      position: relative;
+    }
+
     .header{
       width: 80%;
       margin: auto;
