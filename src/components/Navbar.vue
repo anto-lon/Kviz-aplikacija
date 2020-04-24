@@ -19,7 +19,10 @@
 
         </b-collapse>
       </b-navbar>
+
     </div>
+    
+
 </template>
 
 <style scoped>
@@ -55,14 +58,16 @@
       background-color: transparent !important;
     }
     .navbar-brand{
-      color: #f5ed00!important;
+      color: #ffd800!important;
       font-size: 30px;
       text-transform: uppercase;
     }
     a{
-      color: #f5ed00!important;
+      color: #ffd800!important;
       font-size: 22px;
     }
+    
+
 }
   
 

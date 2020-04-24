@@ -18,6 +18,8 @@
             </div>
         </div>
         <img src="../assets/dashboard/l-side.png" class="side_img"/>
+        
+
     </main>
 </template>
 
@@ -30,6 +32,7 @@ export default {
 <style scoped>
   .img{
     left: 0;
+    
   }
 
   .landing{
@@ -54,6 +57,7 @@ export default {
      left:0;
      z-index: -1; 
      height: 60vh;
+     width: 100%;
    }
 
   .main-section{
