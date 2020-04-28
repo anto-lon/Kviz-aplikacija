@@ -29,6 +29,8 @@
   .dropdownFix{
     position:fixed;
     width: 100vw;
+    z-index: 1;
+    
   }
 
   .link{
@@ -46,13 +48,16 @@
   }
 
   @media only screen and (min-width: 990px) {
+
     .dropdownFix{
       position: relative;
+      
     }
 
     .header{
       width: 80%;
       margin: auto;
+      
     }
      .transparent{
       background-color: transparent !important;
@@ -61,10 +66,15 @@
       color: #ffd800!important;
       font-size: 30px;
       text-transform: uppercase;
+      
     }
     a{
       color: #ffd800!important;
       font-size: 22px;
+      
+    }
+    .dropdownFix, .header, .transparent, .navbar-brand, a{
+      z-index: 2;
     }
     
 
