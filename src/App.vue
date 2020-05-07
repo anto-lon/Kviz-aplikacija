@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navbar />
+    <vue-snotify></vue-snotify>
     <router-view/>
     <Footer />
   </div>
