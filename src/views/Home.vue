@@ -19,80 +19,94 @@
         </div>
         <img src="../assets/dashboard/l-side.png" class="side_img"/>
         
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br>
 
-        <div class="box-card">
-            <div class="box-one">
-              <b-card
-                title="Singleplayer"
-                img-src="https://imagehost.imageupload.net/2020/04/28/singleplayer.png"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="mb-2"
-              >
-                <b-card-text>
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                </b-card-text>
+        <div class="boxCard">
+            <b-container class="bv-example-row">
+              <b-row>
+                <b-col class="col">
+                  <div class="box">
+                    <b-card
+                      title="Singleplayer"
+                      img-src="https://imagehost.imageupload.net/2020/04/28/singleplayer.png"
+                      img-alt="Image"
+                      img-top
+                      tag="article"
+                      style="max-width: 20rem;"
+                      class="mb-2"
+                    >
+                      <b-card-text>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </b-card-text>
 
-                <b-button href="/singleplayer" squared variant="warning" class="cardbtn">Play</b-button>
-              </b-card>    
-            </div>
-            <div class="box-two">
-                <b-card
-                  title="Card Title"
-                  img-src="https://picsum.photos/600/300/?image=25"
-                  img-alt="Image"
-                  img-top
-                  tag="article"
-                  style="max-width: 20rem;"
-                  class="mb-2"
-                >
-                  <b-card-text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </b-card-text>
+                      <b-button href="/singleplayer" squared variant="warning" class="cardbtn">Play</b-button>
+                    </b-card>    
+                  </div>
+                </b-col>
 
-                  <b-button href="#" squared variant="warning" class="cardbtn">Go somewhere</b-button>
-                </b-card>
-            </div>
-            <div class="box-three">
-                 <b-card
-                  title="Card Title"
-                  img-src="https://picsum.photos/600/300/?image=25"
-                  img-alt="Image"
-                  img-top
-                  tag="article"
-                  style="max-width: 20rem;"
-                  class="mb-2"
-                >
-                  <b-card-text>
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </b-card-text>
+                
+                  <b-col class="col">
+                  <div class="box">
+                    <b-card
+                      title="Sign in"
+                      img-src="https://i.ibb.co/njnM2Gg/login.png"
+                      img-alt="Image"
+                      img-top
+                      tag="article"
+                      style="max-width: 20rem;"
+                      class="mb-2"
+                    >
+                      <b-card-text>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </b-card-text>
 
-                  <b-button href="#" squared variant="warning" class="cardbtn">Go somewhere</b-button>
-                </b-card>
-            </div>
+                      <b-button href="/login" squared variant="warning" class="cardbtn">Sign in</b-button>
+                    </b-card>    
+                  </div>
+                </b-col>
+                  <b-col class="col">
+                  <div class="box">
+                    <b-card
+                      title="About..."
+                      img-src="https://i.ibb.co/yg4NBdG/info.png"
+                      img-alt="Image"
+                      img-top
+                      tag="article"
+                      style="max-width: 20rem;"
+                      class="mb-2"
+                    >
+                      <b-card-text>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </b-card-text>
+
+                      <b-button href="/about" squared variant="warning" class="cardbtn">More about</b-button>
+                    </b-card>    
+                  </div>
+                </b-col>
+                
+              </b-row>
+            </b-container>
         </div>
-
         <hr>
         <div class="box-info">
             <br><br>
             <h1>Info</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, velit ab? Alias, recusandae quo. Quos veniam reprehenderit voluptates consectetur consequatur excepturi unde, harum iure. Dignissimos exercitationem esse eaque accusantium fugiat!</p>
+            <p>Lorem, ipsum dolor sitamet consectetur adipisicing elit. Odio, velit ab? Alias, recusandae quo. Quos veniam reprehenderit voluptates consectetur consequatur excepturi unde, harum iure. Dignissimos exercitationem esse eaque accusantium fugiat!</p>
         <br><br>
         </div>
         <hr><br><br>
 
-        <div class="box-us">
-            <div>
-                <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+        <div class="box-us" >
+          <b-container class="bv-example-row">
+            <b-row>
+              <b-col>
+                                <b-card no-body class="overflow-hidden" style="max-width: 540px;">
                     <b-row no-gutters>
                     <b-col md="6">
                         <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image" class="rounded-0"></b-card-img>
                     </b-col>
                     <b-col md="6">
-                        <b-card-body title="Horizontal Card">
+                        <b-card-body title="Stanko Bebek">
                         <b-card-text>
                             This is a wider card with supporting text as a natural lead-in to additional content.
                             This content is a little bit longer.
@@ -101,15 +115,15 @@
                     </b-col>
                     </b-row>
                 </b-card>
-            </div>
-            <div>
-                <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+              </b-col>
+              <b-col>
+                                <b-card no-body class="overflow-hidden" style="max-width: 540px;">
                     <b-row no-gutters>
                     <b-col md="6">
                         <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image" class="rounded-0"></b-card-img>
                     </b-col>
                     <b-col md="6">
-                        <b-card-body title="Horizontal Card">
+                        <b-card-body title="Antonio Lončar">
                         <b-card-text>
                             This is a wider card with supporting text as a natural lead-in to additional content.
                             This content is a little bit longer.
@@ -118,15 +132,10 @@
                     </b-col>
                     </b-row>
                 </b-card>
-            </div>
-        </div>
-
-
-
-
-
-
-
+              </b-col>
+            </b-row>
+          </b-container>
+        </div>         
     </main>
 </template>
 
@@ -171,19 +180,6 @@ export default {
   .main-section{
       flex: 3;
   }
-  .box-card{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap:3%;
-    margin-left: 10%;
-    margin-right: 7%;
-    align-items: center;
-  }
-  .box-card div{
-    padding: 30px;
-    align-items: center;
-  }
 .box-info{
     max-width: 100%;
     margin-left: 11%;
@@ -194,13 +190,7 @@ export default {
     text-align: center;
 }
 .box-us{
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows: minmax(400px,auto);
-    grid-gap:5%;
-    max-width: 100%;
-    margin-left: 11%;
-    margin-right: 7%;
+  margin-bottom: 100px;
 }
 .box-us div{
     align-items: center;
@@ -210,6 +200,28 @@ border: none;
  background-color: #ffd800;
  cursor: pointer; 
 }
+.boxCard{
+align-items: center;
+margin-top:170px;
+margin-bottom: 60px;
+margin-left: 10%;
+margin-right: 10%;
+}
+/*
+Ovo ne funk bas na onaj nacn koji sam htio al nije lose rijesenje,ako znas
+neko bolje prepravi slobodno :D PS. Radi se o prve 3 kartice ,kada smanjivas ekran
+ne smanjivaju se bas ponajbolje..
+@media screen and (max-width: 850px){
+  .boxCard{
+    align-items: center;
+    margin-top:170px;
+    margin-bottom: 60px;
+    margin-left: 21%;
+    margin-right: 21%;
+    }
 
+}
+
+*/
 
 </style>
