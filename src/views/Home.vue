@@ -221,7 +221,7 @@ export default {
 }
 
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 768px) {
   .animation, .side_img {
     display: none;
   }
@@ -229,6 +229,7 @@ export default {
   .intro-text{
     margin-top: 100px;
     font-size: 12px;
+    text-align: center
   }
 
   .intro-text h1{
@@ -262,7 +263,31 @@ export default {
     margin-top: 2em;
   }
   
-
 }
+
+ @media only screen and (max-width: 992px) {
+   .animation, .side_img{
+     display: none;
+   }
+
+   .intro-text{
+     margin-top: 100px;
+   }
+
+   .intro-text h1{
+    font-size: 32px;
+  }
+
+   .intro-text, .button-section{
+     display: grid;
+     place-items: center;
+   }
+
+   .button-section{
+     display: flex;
+     justify-content: center;
+   }
+ }
+
 
 </style>
