@@ -138,13 +138,17 @@
           </div>
         </div>   
         <br />   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+        {{ current_user }}
     </main>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'Home',
-  
+  computed: {
+    ...mapState(['current_user'])
+  }
 }
 </script>
 

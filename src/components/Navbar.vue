@@ -13,17 +13,43 @@
           </b-navbar-nav>
 
           <b-navbar-nav class="ml-auto">
-              <router-link to="/login" class="link">Login</router-link>
-              <router-link to="/register" class="link">Register</router-link>
+              <router-link to="/login" class="link" v-show="!isLoggedIn">Login</router-link>
+              <router-link to="/register" class="link" v-show="!isLoggedIn">Register</router-link>
+              <b-button class="btn btn-danger" @click="logout" v-show="isLoggedIn">Logout</b-button>
           </b-navbar-nav>
-
+          
         </b-collapse>
       </b-navbar>
-
     </div>
     
 
 </template>
+
+<script>
+import firebase from 'firebase'
+export default {
+  data(){
+    return{
+      isLoggedIn: false,
+      currentUser: false
+    }
+  },
+  methods: {
+        logout(){
+            firebase.auth().signOut()
+            .then(() => {
+                this.$router.push('/login')
+            })
+        }
+    },created() {
+        if(firebase.auth().currentUser){
+          this.isLoggedIn = true
+            this.currentUser = firebase.auth().currentUser.email
+            console.log(firebase.auth().currentUser.email)
+        }
+    }
+}
+</script>
 
 <style scoped>
   .dropdownFix{

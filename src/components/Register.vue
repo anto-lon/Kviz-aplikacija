@@ -61,13 +61,13 @@
 
 <script>
 import firebase from 'firebase'
+
   export default {
     data() {
       return {
         email: '',
         name: '',
         password: '',
-        food: null,
         show: true
       }
     },
@@ -77,6 +77,7 @@ import firebase from 'firebase'
             .then(user => {
                 this.$snotify.success(`You have been successfully logged in with ${user.user.email}`)
                 this.$router.push('/')
+
             })
             .catch(err => {
                 this.$snotify.error(err)

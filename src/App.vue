@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar :key="$route.fullPath"/>
     <vue-snotify></vue-snotify>
     <router-view/>
     <Footer />

@@ -40,7 +40,7 @@
                   contain spaces, special characters, or emoji.
                   </b-form-text>
                   <br>
-                    <b-button variant="warning" class="button " @click.prevent="register"> Submit</b-button> 
+                    <b-button variant="warning" class="button " @click.prevent="login"> Submit</b-button> 
                     <p>New here?<a href="../register">Sign up.</a></p>
                   
                 </b-form>
@@ -66,18 +66,18 @@
       return {
         email: '',
         password: '',
-        food: null,
         show: true
       }
     },
     methods: {
-      register(){
+      login(){
             firebase.auth().signInWithEmailAndPassword(this.email, this.password)
             .then(user => {
-                console.log(user)
+                this.$snotify.success(`You have been successfully logged in with ${user.user.email}`)
+                this.$router.push('/singleplayer')
             })
             .catch(err => {
-                console.log(err)
+                this.$snotify.error(err)
             })
         }
     }
