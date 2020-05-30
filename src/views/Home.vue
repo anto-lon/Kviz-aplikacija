@@ -137,18 +137,13 @@
           </b-row>
           </div>
         </div>   
-        <br />   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
-        {{ current_user }}
+        <br />   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
     </main>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
-  name: 'Home',
-  computed: {
-    ...mapState(['current_user'])
-  }
+  name: 'Home'
 }
 </script>
 

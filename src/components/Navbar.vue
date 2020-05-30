@@ -15,6 +15,7 @@
           <b-navbar-nav class="ml-auto">
               <router-link to="/login" class="link" v-show="!isLoggedIn">Login</router-link>
               <router-link to="/register" class="link" v-show="!isLoggedIn">Register</router-link>
+              <router-link to="/profile" v-show="isLoggedIn" class="profile-link"><i class="material-icons account">account_circle</i></router-link>
               <b-button class="btn btn-danger" @click="logout" v-show="isLoggedIn">Logout</b-button>
           </b-navbar-nav>
           
@@ -65,6 +66,17 @@ export default {
     text-decoration: none;
   }
 
+  .profile-link .account{
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.5)!important;
+    margin-top: 10px;
+    margin-right: 1em;
+  }
+
+  .profile-link{
+    margin-left: 0.8em;
+  }
+
   .navbar-brand{
       font-size: 24px;
       text-transform: uppercase;
@@ -102,7 +114,6 @@ export default {
     .dropdownFix, .header, .transparent, .navbar-brand, a{
       z-index: 2;
     }
-    
 
 }
   

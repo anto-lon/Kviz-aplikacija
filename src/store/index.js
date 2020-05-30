@@ -15,10 +15,11 @@ export default new Vuex.Store({
   actions: {
     set_current_user({ commit }){
       if(firebase.auth().currentUser){
-          const currentUser = firebase.auth().currentUser.email
+          const currentUser = firebase.auth().currentUser
           commit('SET_CURRENT_USER', currentUser)
       }
     }
+
   },
   getters: {
   }

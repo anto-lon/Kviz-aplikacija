@@ -2,7 +2,7 @@
     <div>
         <b-container class="singleplayer_container">
             <h1>Singleplayer</h1>
-            {{ current_user }}
+            {{ current_user.email }}
         </b-container>
     </div>
 </template>

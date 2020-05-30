@@ -14,14 +14,13 @@ import store from './store'
 
 
 const configOptions = {
-  apiKey: "AIzaSyBKDFyDpstlLI0Ax6nolFwYatQ97BlQ4sE",
-  authDomain: "don-quizotee.firebaseapp.com",
-  databaseURL: "https://don-quizotee.firebaseio.com",
-  projectId: "don-quizotee",
-  storageBucket: "don-quizotee.appspot.com",
-  messagingSenderId: "212812222047",
-  appId: "1:212812222047:web:e1389ada48b412e80515ea",
-  measurementId: "G-MEEY2KYH5R"
+  apiKey: "AIzaSyA-ajSn3uqqKs7hbl9kHauUaYdqkx9N1F4",
+  authDomain: "don-quizotee-66b18.firebaseapp.com",
+  databaseURL: "https://don-quizotee-66b18.firebaseio.com",
+  projectId: "don-quizotee-66b18",
+  storageBucket: "don-quizotee-66b18.appspot.com",
+  messagingSenderId: "122856884575",
+  appId: "1:122856884575:web:5ca6c4b4319a68ecd90eea"
 };
 
 firebase.initializeApp(configOptions);
@@ -30,6 +29,7 @@ firebase.initializeApp(configOptions);
 Vue.use(Snotify);
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(require('vue-moment'))
 
 let app
 firebase.auth().onAuthStateChanged(user => {
