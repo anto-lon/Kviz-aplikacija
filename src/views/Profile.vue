@@ -24,11 +24,11 @@
         Name: <span v-if="first_name">{{ first_name }}</span><span v-else>not set</span><br> <br>
         Lastname: <span v-if="last_name">{{ last_name }}</span><span v-else>not set</span> <br> <br>
         Email: <span v-if="current_user.email">{{ current_user.email }}</span><span v-else>not set</span><br> <br>
-        Date of birth: <span v-if="date_of_birth !== null">{{ date_of_birth.toDate() | moment("MMMM Do YYYY") }}</span><span v-else>not set</span><br> <br>
+        Date of birth:<span v-if="date_of_birth !== null"> {{ date_of_birth }}</span><span v-else> not set</span><br> <br>
         <hr><br>
       </div>
       <div class="info game">
-        Last played: <span v-if="date_of_birth !== null">{{ last_played.toDate() | moment("MMMM Do YYYY") }}</span><br> <br>
+        Last played: <span v-if="last_played !== null">{{ last_played.toDate() | moment("MMMM Do YYYY") }}</span><span v-else>no games played yet</span><br> <br>
         Matches played: {{ total_played_games }}<br> <br>
         Points collected: {{ total_points }}<br> <br>
         Average points collected: <br> <br>
@@ -57,7 +57,6 @@
         <b-form-group
           label="First name"
           label-for="name-input"
-          invalid-feedback="Name is required"
         >
           <b-form-input
             id="name-input"
@@ -70,7 +69,6 @@
         <b-form-group
           label="Last name"
           label-for="name-input"
-          invalid-feedback="Name is required"
         >
         <b-form-input
             id="name-input"
@@ -83,13 +81,24 @@
         <b-form-group
           label="Username"
           label-for="name-input"
-          invalid-feedback="Name is required"
         >
         <b-form-input
             id="name-input"
             v-model="current_user.displayName"
             required
           ></b-form-input>
+
+        </b-form-group>
+
+        <b-form-group
+          label="Date of birth"
+          label-for="date-of-birth"
+        >
+        <b-form-datepicker
+            id="date-of-birth"
+            v-model="date_of_birth"
+            required
+          ></b-form-datepicker>
 
         </b-form-group>
       </form>
@@ -134,7 +143,8 @@ export default {
             querySnapshot.forEach(doc => {
                 doc.ref.update({
                     first_name: this.first_name,
-                    last_name: this.last_name
+                    last_name: this.last_name,
+                    date_of_birth: this.date_of_birth
                 })
 
                 this.current_user.updateProfile({

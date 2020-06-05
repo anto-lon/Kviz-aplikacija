@@ -77,12 +77,26 @@ import firebase from 'firebase'
             .then(user => {
                 this.$snotify.success(`You have been successfully logged in with ${user.user.email}`)
                 this.$router.push('/')
+                //console.log(user.user.uid)
+                this.addNewProfile(user.user.uid)
 
             })
             .catch(err => {
                 this.$snotify.error(err)
             })
-        }
+        },
+        addNewProfile(created_user_id){
+        firebase.firestore().collection('profiles').add({
+          user_id: created_user_id,
+          first_name: null,
+          last_name: null,
+          level: 'beginner',
+          total_games_played: 0,
+          total_points: 0,
+          date_of_birth: null,
+          last_played: null
+        })
+      }
     }
   }
 </script>
