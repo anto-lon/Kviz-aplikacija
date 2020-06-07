@@ -40,9 +40,12 @@
                   contain spaces, special characters, or emoji.
                   </b-form-text>
                   <br>
-                    <b-button variant="warning" class="button " @click.prevent="login"> Submit</b-button> 
-                    <p>New here?<a href="../register">Sign up.</a></p>
-                  
+                  <div class="wrapper">
+                    <b-button variant="warning" class="button " @click.prevent="login"> Submit</b-button>
+                  </div><br><br>
+                    <div class="sign">
+                      <p>New here?<a href="../register">Sign up.</a></p>
+                    </div>
                 </b-form>
             </div> 
            </b-row>
@@ -105,22 +108,25 @@ padding: 25px;
 }
 .photo{
 width: 630px;
-height: 630px;
+height: 640px;
 padding: 30px;
 }
 .form{
   margin: 10%;
 }
+
 .button{
-  margin-left: 26%;
   border:none;
   border-radius: 0px;
-  margin-right:26% ;
-  
+  position: absolute;
+  margin-left:-25px;
+
 }
+
 .form p{
   text-align: center;
   margin-top: 2px;
+  
 }
 .down{
   padding: 50px;

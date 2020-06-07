@@ -21,7 +21,7 @@
 
         <div class="boxCard">
           <div class="mb-5 text-center">
-              <h3 class="card-info">Learn more about our app</h3>
+              <h3 class="card-info">Learn more about our app</h3><br>
           </div>
             <div class="bv-example-row">
               <b-row>

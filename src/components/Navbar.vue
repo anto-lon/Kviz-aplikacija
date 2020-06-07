@@ -20,7 +20,9 @@
           </b-navbar-nav>
           
         </b-collapse>
+        
       </b-navbar>
+      
     </div>
     
 
@@ -112,7 +114,7 @@ export default {
       
     }
     .dropdownFix, .header, .transparent, .navbar-brand, a{
-      z-index: 2;
+      z-index: 1;
     }
 
 }

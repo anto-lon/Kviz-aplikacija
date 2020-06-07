@@ -40,9 +40,13 @@
                   contain spaces, special characters, or emoji.
                   </b-form-text>
                   <br>
-                    <b-button variant="warning" class="button " @click.prevent="register"> Submit</b-button> 
+                  <div class="wrapper">
+                    <b-button variant="warning" class="button " @click.prevent="register"> Submit</b-button>
+                  </div><br><br>
+                  <div class="sign">
                     <p>Already have account?<a href="../login">Sign in here.</a></p>
-                  
+                  </div>
+
                 </b-form>
             </div> 
            </b-row>
@@ -110,7 +114,7 @@ import firebase from 'firebase'
  
   margin-top: 30px; 
   margin-bottom: 50px; 
-  margin-left: 70px; 
+  margin-left: 20px; 
   margin-right: 70px;
   border:solid #ffd800 10px;
 }
@@ -122,18 +126,18 @@ padding: 25px;
 }
 .photo{
 width: 630px;
-height: 630px;
+height: 640px;
 padding: 30px;
 }
 .form{
   margin: 10%;
 }
 .button{
-  margin-left: 26%;
   border:none;
   border-radius: 0px;
-  margin-right:26% ;
-  
+  position: absolute;
+  margin-left:-25px;
+
 }
 .form p{
   text-align: center;
@@ -147,6 +151,13 @@ padding: 30px;
   .remove, .photo{
     display: none;
   }
+  .signinbox{
+  margin-top: 30px; 
+  margin-bottom: 50px; 
+  margin-left: 70px; 
+  margin-right: 70px;
+  border:solid #ffd800 10px;
+}
 }
 .container{
   position: relative;
