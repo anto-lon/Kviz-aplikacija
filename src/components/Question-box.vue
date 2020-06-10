@@ -32,7 +32,8 @@
       next: Function,
       increment: Function,
       counterQuestions: Number,
-      numTotal: Number
+      numTotal: Number,
+      sendResultsOnFinish: Function
     },
     data() {
       return {
@@ -69,6 +70,7 @@
           this.increment(isCorrect, this.currentQuestion.difficulty);
       },
       finishGame(){
+        this.sendResultsOnFinish()
         this.$router.go(-1)
       }
     },

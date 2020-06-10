@@ -31,7 +31,7 @@
         Last played: <span v-if="last_played !== null">{{ last_played.toDate() | moment("MMMM Do YYYY") }}</span><span v-else>no games played yet</span><br> <br>
         Matches played: {{ total_played_games }}<br> <br>
         Points collected: {{ total_points }}<br> <br>
-        Average points collected: <br> <br>
+        Average points collected: {{ getAveragePoints() }} <br> <br>
         Scoreboard rank: <br> <br><br />
       </div>
       <div class="btn">
@@ -136,6 +136,13 @@ export default {
         bvModalEvt.preventDefault()
         // Trigger submit handler
         this.handleSubmit()
+      },
+      getAveragePoints(){
+        if( this.total_played_games !== null){
+          return this.total_points / this.total_played_games
+        }else{
+          return "Not played any games yet."
+        }
       },
       handleSubmit() {
         firebase.firestore().collection('profiles').where('user_id', '==', `${this.current_user.uid}`).get()

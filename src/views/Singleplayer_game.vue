@@ -17,6 +17,7 @@
      :increment="increment"
      :counterQuestions="counter"
      :numTotal="numTotal"
+     :sendResultsOnFinish="sendResultsOnFinish"
      />
 
 
@@ -47,7 +48,8 @@ import { mapState } from 'vuex'
         current_user_profile: {
           level: null,
           total_points: null,
-          total_played_games: null,
+          total_games_played: null,
+          last_played: null,
           badges: null
         },
         difficultys:{
@@ -74,6 +76,18 @@ import { mapState } from 'vuex'
           }
           this.numTotal++;
           console.log(this.numTotal)
+      },
+      sendResultsOnFinish(){
+        firebase.firestore().collection('profiles').where('user_id', '==', `${this.current_user.uid}`).get()
+        .then(querySnapshot => {
+            querySnapshot.forEach(doc => {
+                doc.ref.update({
+                    total_games_played: this.current_user_profile.total_games_played + 1,
+                    total_points: this.current_user_profile.total_points + this.points,
+                    last_played: new Date()
+                })
+            })
+        })
       }
     },
     computed: {
@@ -89,8 +103,9 @@ import { mapState } from 'vuex'
             querySnapshot.forEach(doc => {
                 this.current_user_profile.level = doc.data().level,
                 this.current_user_profile.total_points = doc.data().total_points,
-                this.current_user_profile.total_played_games = doc.data().total_games_played
-                this.current_user_profile.badges = doc.data().badges
+                this.current_user_profile.total_games_played = doc.data().total_games_played,
+                this.current_user_profile.badges = doc.data().badges,
+                this.current_user_profile.last_played = doc.data().last_played
             })
         })
     }
