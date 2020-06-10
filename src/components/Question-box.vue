@@ -17,7 +17,7 @@
           </b-list-group-item>
         <div class="btn">
             <b-button variant="success" @click="submitAnswer" :disabled="selectedIndex === null || answered">Send</b-button>
-            <b-button @click="next" variant="warning" href="#" v-if="counterQuestions !== 9">Next</b-button>
+            <b-button @click="next(answered)" variant="warning" href="#" v-if="counterQuestions !== 9">Next</b-button>
             <b-button @click="finishGame" variant="primary" href="#" v-else>Finish</b-button>
         </div>
 

@@ -58,10 +58,12 @@ import { mapState } from 'vuex'
       }
     },
     methods:{
-        next(){
+        next(answered){
           this.current_index++
           this.counter++
-          this.numTotal++
+          if(!answered){
+            this.numTotal++
+          }
 
         },
         increment(isCorrect, difficulty){
