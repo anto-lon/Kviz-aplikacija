@@ -3,6 +3,7 @@ import App from './App.vue'
 import firebase from 'firebase'
 import Snotify from 'vue-snotify';
 import 'vue-snotify/styles/material.css';
+import VueSimpleAlert from "vue-simple-alert";
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -31,6 +32,7 @@ firebase.initializeApp(configOptions);
 
 Vue.use(VueAxios, axios);
 Vue.use(Snotify);
+Vue.use(VueSimpleAlert)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(require('vue-moment'))

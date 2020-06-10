@@ -2,11 +2,10 @@
     <div>
         <b-container class="singleplayer_container">
             <h1>Singleplayer</h1>
-            {{ current_user.email }}
 
             <br />
 
-            <b-button variant="outline-warning" @click.prevent="handleQuestions">Fetch data</b-button>
+            <b-button variant="outline-warning" @click.prevent="handleQuestions">Random questions</b-button>
             
         </b-container>
     </div>

@@ -86,7 +86,15 @@ import { mapState } from 'vuex'
                     total_points: this.current_user_profile.total_points + this.points,
                     last_played: new Date()
                 })
-            })
+                .then(() => {
+                  this.$fire({
+                    title: "You successfully finished your game!",
+                    text: "Check the scoreboard for more info.",
+                    type: "success",
+                    timer: 4000
+                  })
+              })
+          })
         })
       }
     },
