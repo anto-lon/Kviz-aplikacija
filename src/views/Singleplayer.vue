@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 import { mapState } from 'vuex'
 import { mapActions } from 'vuex'
 export default {
@@ -62,6 +63,21 @@ export default {
         this.set_current_user()
 
         this.get_categories()
+    },
+    mounted(){
+        firebase.firestore().collection('profiles').where('user_id', '==', `${this.current_user.uid}`).get()
+        .then(querySnapshot => {
+            querySnapshot.forEach(doc => {
+                if(doc.data().first_name === null || doc.data().last_name === null){
+                    this.$fire({
+                    title: "Update your profile info!",
+                    text: "Please update your profile if you wanna see your name on the scoreboard",
+                    type: "warning",
+                    timer: 4000
+                  })
+                }
+          })
+        })
     }
 }
 </script>
