@@ -38,7 +38,7 @@ Vue.use(BootstrapVue)
 Vue.use(require('vue-moment'))
 
 let app
-firebase.auth().onAuthStateChanged(user => {
+firebase.auth().onAuthStateChanged(() => {
   if(!app){
     app = new Vue({
       router,
@@ -46,7 +46,7 @@ firebase.auth().onAuthStateChanged(user => {
       render: h => h(App)
     }).$mount('#app') 
   }
-  console.log(user)
+  //console.log(user)
 })
 
 
