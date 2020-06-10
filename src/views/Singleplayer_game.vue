@@ -81,10 +81,16 @@ import { mapState } from 'vuex'
         firebase.firestore().collection('profiles').where('user_id', '==', `${this.current_user.uid}`).get()
         .then(querySnapshot => {
             querySnapshot.forEach(doc => {
+                if(this.current_user.total_games_played > 150 && this.current_user.total_points > 1500){
+                  this.current_user_profile.level = "advnaced"
+                }else if(this.current_user_profile.total_games_played > 50 && this.current_user_profile.total_points > 500){
+                  this.current_user_profile.level = "intermediate"
+                }
                 doc.ref.update({
                     total_games_played: this.current_user_profile.total_games_played + 1,
                     total_points: this.current_user_profile.total_points + this.points,
-                    last_played: new Date()
+                    last_played: new Date(),
+                    level: this.current_user_profile.level
                 })
                 .then(() => {
                   this.$fire({

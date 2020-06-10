@@ -6,19 +6,19 @@
         </b-row>
         <br><br><br><br><br>
         <b-row>
-            <b-col> 
+            <b-col xs="12" md="6"> 
                 <h3>Random questions </h3> <br>
                 <div class="btn">
                 <b-button variant="outline-warning" @click.prevent="handleQuestions">Random questions</b-button>
                 </div> <br><br>
             </b-col>
-            <b-col> 
-                <h3> Select question group </h3> 
+            <b-col xs="12" md="6" class="category_questions"> 
+                <h3> Select category </h3> 
                 <div class="select">
                 <b-form-select v-model="selected" :options="categories"></b-form-select>
                 </div><br><br><br><br>
                 <div class="btn2">
-                    <b-button variant="outline-warning" @click="handleCategoryQuestions">Play</b-button>
+                    <b-button variant="outline-warning" @click="handleCategoryQuestions" block>Play</b-button>
                 </div><br><br><br><br><br><br>
             </b-col>    
         </b-row>
@@ -123,6 +123,16 @@ hr.line:after {
 }
 p{
     font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  h3{
+    font-size: 1.2em;
+  }
+
+  .category_questions{
+      margin-top: 2em;
+  }
 }
 
 </style>
