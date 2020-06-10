@@ -1,5 +1,6 @@
 <template>
     <div>
+<<<<<<< HEAD
         <b-container class="bv-example-row "><br><br><br>
         <b-row>
             <b-col> <h1> Singleplayer mode's </h1> </b-col>
@@ -29,6 +30,21 @@
             </b-col>    
         </b-row>
         </b-container>
+=======
+        <b-container class="singleplayer_container">
+            <h4>{{ current_user.displayName }}</h4>
+            <h1 style="text-align:center" class="text-warning">Singleplayer</h1>
+
+            <br />
+
+            <b-button variant="outline-warning" @click.prevent="handleQuestions">Random questions</b-button>
+
+            <br />
+
+            <b-form-group label="Choose category..">
+                <b-form-select v-model="selected" :options="categories"></b-form-select>
+            </b-form-group>
+>>>>>>> 3b5701acd9788c89e21e8efe5072890de81e31b4
 
 
     </div>

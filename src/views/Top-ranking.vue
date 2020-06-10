@@ -1,16 +1,15 @@
 <template>
-  <div class="about">
+  <div>
     <h1 style="text-align: center">Ovaj dio je još uvijek u izradi!</h1>
   </div>
 </template>
 
+<script>
+export default {
 
+}
+</script>
 
+<style>
 
-
-
-
-
-
-
-
+</style>
