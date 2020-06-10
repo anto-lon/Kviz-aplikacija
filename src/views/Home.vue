@@ -136,13 +136,17 @@
               </b-col>
           </b-row>
           </div>
-        </div>   
-        <br />   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        </div> 
+        <Footer />
     </main>
 </template>
 
 <script>
+import Footer from '../components/Footer'
 export default {
+  components: {
+    Footer
+  },
   name: 'Home'
 }
 </script>

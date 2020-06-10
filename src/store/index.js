@@ -9,11 +9,20 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     current_user: null,
-    questions: []
+    questions: [],
+    categories: []
   },
   mutations: {
     SET_CURRENT_USER: (state, user) => state.current_user = user,
-    SET_RANDOM_QUESTIONS: (state, questions) => state.questions = questions.results
+    SET_QUESTIONS: (state, questions) => state.questions = questions.results,
+    SET_CATEGORIES: (state, categories) =>  {
+      for(var i = 0; i < categories.trivia_categories.length; i++){
+        var value = categories.trivia_categories[i].id
+        var text = categories.trivia_categories[i].name
+
+        state.categories.push({value, text})
+    }
+    }
   },
   actions: {
     set_current_user({ commit }){
@@ -25,7 +34,19 @@ export default new Vuex.Store({
     set_random_questions({ commit }){
       axios.get('https://opentdb.com/api.php?amount=10')
       .then(response => {
-        commit('SET_RANDOM_QUESTIONS', response.data)
+        commit('SET_QUESTIONS', response.data)
+      })
+    },
+    set_category_questions({commit}, category){
+      axios.get(`https://opentdb.com/api.php?amount=10&category=${category}`)
+      .then(response => {
+        commit('SET_QUESTIONS', response.data)
+      })
+    },
+    get_categories({ commit }){
+      axios.get(`https://opentdb.com/api_category.php`)
+      .then(response => {
+        commit('SET_CATEGORIES', response.data)
       })
     }
 
