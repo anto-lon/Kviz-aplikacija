@@ -1,7 +1,7 @@
 <template>
         <div class="col-md-8 my-col-right">
         <br><br>
-        <h3> Question no.  </h3> 
+        <h3> Question no. {{ counterQuestions + 1}}</h3> 
         <br> 
         <div class="question">
         <p>{{ currentQuestion.question }}</p>  
@@ -18,7 +18,7 @@
         <div class="btn">
             <b-button variant="success" @click="submitAnswer" :disabled="selectedIndex === null || answered">Send</b-button>
             <b-button @click="next" variant="warning" href="#" v-if="counterQuestions !== 9">Next</b-button>
-            <b-button @click="next" variant="primary" href="#" v-else>Finish</b-button>
+            <b-button @click="finishGame" variant="primary" href="#" v-else>Finish</b-button>
         </div>
 
     </div>
@@ -66,6 +66,9 @@
           }
           this.answered = true;
           this.increment(isCorrect, this.currentQuestion.difficulty);
+      },
+      finishGame(){
+        this.$router.go(-1)
       }
     },
     computed: {

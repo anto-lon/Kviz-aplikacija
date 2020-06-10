@@ -9,7 +9,7 @@
         <h4> {{ points }} </h4>
         <br><hr class="cc">
         <br>
-        <h3>Rank </h3>
+        <h3>Rank</h3>
         <h4>Silver </h4>
         <br><hr class="cc">
         <br>

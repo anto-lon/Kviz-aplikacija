@@ -7,8 +7,7 @@
             <br />
 
             <b-button variant="outline-warning" @click.prevent="handleQuestions">Fetch data</b-button>
-
-            {{ questions }}
+            
         </b-container>
     </div>
 </template>
