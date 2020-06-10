@@ -72,10 +72,10 @@ import { mapState } from 'vuex'
           if(isCorrect){
             this.numCorrect++
             this.points += this.difficultys[difficulty];
-            console.log(this.numCorrect, difficulty)
+            //console.log(this.numCorrect, difficulty)
           }
           this.numTotal++;
-          console.log(this.numTotal)
+          //console.log(this.numTotal)
       },
       sendResultsOnFinish(){
         firebase.firestore().collection('profiles').where('user_id', '==', `${this.current_user.uid}`).get()
