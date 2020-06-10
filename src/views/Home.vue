@@ -9,8 +9,8 @@
                     </p>
                 </div>
                 <div class="button-section">
-                    <b-button squared variant="outline-warning">Getting started</b-button>
-                    <b-button squared variant="warning">Learn more</b-button>
+                    <b-button  squared variant="outline-warning" >Getting started</b-button>
+                    <b-button  squared variant="warning" >Learn more</b-button>
                 </div>
             </div>
             <div class="animation">
@@ -136,7 +136,7 @@
               </b-col>
           </b-row>
           </div>
-        </div> 
+        </div> <br><br>
         <Footer />
     </main>
 </template>

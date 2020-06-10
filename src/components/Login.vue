@@ -34,7 +34,7 @@
 
                 </b-form-group>
                   <label for="text-password">Password</label>
-                  <b-input type="password" id="text-password" v-model="password"></b-input>
+                  <b-input type="password" id="text-password" v-model="password" v-on:keyup.enter="login"></b-input>
                   <b-form-text id="password-help-block">
                   Your password must be 8-20 characters long, contain letters and numbers, and must not
                   contain spaces, special characters, or emoji.

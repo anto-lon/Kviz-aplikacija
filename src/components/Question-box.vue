@@ -119,6 +119,10 @@
   .incorrect{
       background: red;
   }
+.my-col-right{
+  border-bottom-color: aqua;
+}
+
  @media only screen and (max-width: 760px){
      .question, p{
          font-size: 20px;
