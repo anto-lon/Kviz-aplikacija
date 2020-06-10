@@ -1,7 +1,7 @@
 <template>
         <div class="col-md-8 my-col-right">
         <br><br>
-        <h3> Question no. {{ counterQuestions + 1}}</h3> 
+        <h3> Question no. {{ counterQuestions + 1}} / {{ currentQuestion.difficulty }}</h3> 
         <br> 
         <div class="question">
         <p>{{ currentQuestion.question }}</p>  
@@ -31,7 +31,8 @@
       currentQuestion: Object,
       next: Function,
       increment: Function,
-      counterQuestions: Number
+      counterQuestions: Number,
+      numTotal: Number
     },
     data() {
       return {
