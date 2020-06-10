@@ -1,6 +1,7 @@
 <template>
     <div>
         <b-container class="singleplayer_container">
+            <h4>{{ current_user.displayName }}</h4>
             <h1 style="text-align:center" class="text-warning">Singleplayer</h1>
 
             <br />
