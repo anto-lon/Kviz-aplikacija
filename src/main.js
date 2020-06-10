@@ -4,6 +4,9 @@ import firebase from 'firebase'
 import Snotify from 'vue-snotify';
 import 'vue-snotify/styles/material.css';
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 import BootstrapVue from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -26,6 +29,7 @@ const configOptions = {
 firebase.initializeApp(configOptions);
 
 
+Vue.use(VueAxios, axios);
 Vue.use(Snotify);
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
