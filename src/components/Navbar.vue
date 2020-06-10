@@ -10,6 +10,7 @@
             <router-link to="/" class="link">Home</router-link>
             <router-link to="/about" class="link">About</router-link>
             <router-link to="/singleplayer" class="link">Singleplayer</router-link>
+            <router-link to="/top_ranking" class="link">TopRanking</router-link>
           </b-navbar-nav>
 
           <b-navbar-nav class="ml-auto">

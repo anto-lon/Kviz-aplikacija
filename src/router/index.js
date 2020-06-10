@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Singleplayer from '../views/Singleplayer.vue'
 import Singleplayer_game from '../views/Singleplayer_game.vue'
 import Profile from '../views/Profile.vue'
+import TopRanking from '../views/Top-ranking.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 import firebase from 'firebase'
@@ -31,6 +32,14 @@ Vue.use(VueRouter)
     path: '/singleplayer/singleplayer_game',
     name: 'Singleplayer_game',
     component: Singleplayer_game,
+    meta:{
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/top_ranking',
+    name: 'Top_ranking',
+    component: TopRanking,
     meta:{
       requiresAuth: true
     }

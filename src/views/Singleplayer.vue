@@ -9,9 +9,9 @@
 
             <br />
 
-            <div>
+            <b-form-group label="Choose category..">
                 <b-form-select v-model="selected" :options="categories"></b-form-select>
-            </div>
+            </b-form-group>
 
             <br /><br />
 
