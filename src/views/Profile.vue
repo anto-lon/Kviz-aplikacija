@@ -36,7 +36,7 @@
       </div>
       <div class="btn">
         <b-button squared variant="warning" v-b-modal.modal-prevent-closing>Edit profile</b-button>
-        <b-button squared variant="warning" class="top"><router-link to="/Top-ranking" class="text-black">Scoreboard</router-link></b-button>
+        <b-button squared variant="warning" class="top"><router-link to="/top_ranking" class="text-black">Scoreboard</router-link></b-button>
       </div>
     </div>
   </div>

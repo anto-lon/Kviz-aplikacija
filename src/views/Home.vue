@@ -10,7 +10,7 @@
                 </div>
                 <div class="button-section">
                     <b-button  squared variant="warning" ><router-link to="/singleplayer" class="text-black">Getting started</router-link></b-button>
-                    <b-button  squared variant="warning" ><router-link to="/singleplayer" class="text-black">Learn more</router-link></b-button>
+                    <b-button  squared variant="warning" ><router-link to="/about" class="text-black">Learn more</router-link></b-button>
                 </div>
             </div>
             <div class="animation">
@@ -80,7 +80,7 @@
                         Some quick example text to build on the card title and make up the bulk of the card's content.
                       </b-card-text>
 
-                      <b-button  squared variant="warning" class="cardbtn"><router-link to="/About" class="text">More about</router-link></b-button>
+                      <b-button  squared variant="warning" class="cardbtn"><router-link to="/about" class="text">More about</router-link></b-button>
                     </b-card>    
                   </div>
                 </b-col>
