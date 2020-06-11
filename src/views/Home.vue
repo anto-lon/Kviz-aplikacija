@@ -9,7 +9,7 @@
                     </p>
                 </div>
                 <div class="button-section">
-                    <b-button  squared variant="outline-warning" ><router-link to="/singleplayer" class="text-yellow">Getting started</router-link></b-button>
+                    <b-button  squared variant="warning" ><router-link to="/singleplayer" class="text-black">Getting started</router-link></b-button>
                     <b-button  squared variant="warning" ><router-link to="/singleplayer" class="text-black">Learn more</router-link></b-button>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                 <b-card no-body class="overflow-hidden" style="max-width: 270px;">
                   <b-row no-gutters>
                     <b-col md="6">
-                      <b-card-img src="https://image.flaticon.com/icons/svg/2896/2896974.svg" alt="Image" class="rounded-0"  height="200px"></b-card-img>
+                      <b-card-img src="https://i.ibb.co/xhP0bz3/avatarstanko.png" alt="Image" class="rounded-0"  height="200px"></b-card-img>
                     </b-col>
                     <b-col md="6">
                       <b-card-body title="Stanko Bebek">
@@ -118,7 +118,7 @@
                 <b-card no-body class="overflow-hidden" style="max-width: 270px;">
                   <b-row no-gutters>
                     <b-col md="6">
-                      <b-card-img src="https://image.flaticon.com/icons/svg/2897/2897014.svg" alt="Image" class="rounded-0" height="200px"></b-card-img>
+                      <b-card-img src="https://i.ibb.co/51Rkx5d/avatarantonio.png" alt="Image" class="rounded-0" height="200px"></b-card-img>
                     </b-col>
                     <b-col md="6">
                       <b-card-body title="Antonio Lončar">
@@ -220,15 +220,16 @@ export default {
   p {
     word-break: break-word;
 }
-.text{
+a.text{
   color: white;
+  text-decoration: none;
 }
-.text-black{
+a.text-black{
   color:black;
+  text-decoration: none;
 }
-.text-yellow{
-  color: #ffd800;
-}
+
+
 
 
   @media only screen and (max-width: 768px) {

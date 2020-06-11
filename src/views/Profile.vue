@@ -36,7 +36,7 @@
       </div>
       <div class="btn">
         <b-button squared variant="warning" v-b-modal.modal-prevent-closing>Edit profile</b-button>
-        <b-button squared variant="warning" class="top">Scoreboard</b-button>
+        <b-button squared variant="warning" class="top"><router-link to="/Top-ranking" class="text-black">Scoreboard</router-link></b-button>
       </div>
     </div>
   </div>
@@ -231,6 +231,12 @@ h3, h5{
   display: block;
   margin-top: 10px;
 }
+
+a.text-black{
+  color: black;
+  text-decoration:none;
+
+}
 @media only screen and (max-width: 770px){
   .my-container{
 
@@ -242,6 +248,7 @@ h3, h5{
     border:solid 3px #ffd800; 
     height: 100%;
   }
+
 }
 @media only screen and (max-width: 425px){
   .my-container{
@@ -261,6 +268,7 @@ h3, h5{
   .top{
     margin-top: 5px;
   }
+
 }
 
 </style>

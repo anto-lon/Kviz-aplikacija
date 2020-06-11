@@ -2,7 +2,7 @@
   <div class="top_ranking">
     <div class="update-info">
       <p>If you dont see you'r name on the scoreboard, please update you'r profile info!</p>
-      <b-btn variant="primary">Update profile info</b-btn>
+      <b-btn variant="primary"><router-link to="/Profile" class="text">Update profile info</router-link></b-btn>
     </div>
 
     <hr />
@@ -63,7 +63,7 @@ import firebase  from 'firebase'
 
 <style>
 .top_ranking{
-  margin-top: 3.5em;
+  margin-top: 4em;
 }
 
 .update-info{
@@ -74,6 +74,10 @@ import firebase  from 'firebase'
 
 .update-info p{
   font-size: 22px; 
+}
+a.text{
+  color:white;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 760px){
