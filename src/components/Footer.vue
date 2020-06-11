@@ -34,8 +34,11 @@ p, pre{
 
 }
 
-
-
+@media only screen and (max-width: 460px){
+    p{
+        font-size: 12px;
+    }
+}
 
 
 </style> 

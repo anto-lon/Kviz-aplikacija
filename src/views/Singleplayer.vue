@@ -7,13 +7,16 @@
         <br><br><br><br><br>
         <b-row>
             <b-col xs="12" md="6"> 
-                <h3>Random questions </h3> <br>
+                <h3>Random questions mode </h3> <br>
                 <div class="btn">
                 <b-button variant="outline-warning" @click.prevent="handleQuestions">Random questions</b-button>
-                </div> <br><br>
+                <div class="hide">
+                    <hr class="line top">
+                </div>
+                </div> <br><br> 
             </b-col>
             <b-col xs="12" md="6" class="category_questions"> 
-                <h3> Select category </h3> 
+                <h3 class="top2"> Select category mode </h3> 
                 <div class="select">
                 <b-form-select v-model="selected" :options="categories"></b-form-select>
                 </div><br><br><br><br>
@@ -26,6 +29,7 @@
             <b-col>
                     <hr class="line"> <br>
                    <p> Player name: {{ current_user.displayName }}</p>
+        
             </b-col>    
         </b-row>
         </b-container>
@@ -86,39 +90,39 @@ export default {
 .bv-example-row{
     margin-top: 65px;
     text-align: center;
-    color: #ffd800;
     font-family: Verdana;
 }
 h1{
 text-shadow: 1px 1px 2px rgba(74,74,74,0.64);
+color: #ffd800;
 }
 
 .btn{
 margin: auto;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;
 }
 .select{
 margin: auto;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 40px;   
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;   
 }
 .btn2{
 margin: auto;
-  position: absolute;
-  top: 160px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 40px; 
+    position: absolute;
+    top: 160px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px; 
 }
 hr.line {
     overflow: visible; /* For IE */
@@ -139,15 +143,30 @@ hr.line:after {
 }
 p{
     font-size: 20px;
+    color: black;
 }
+.hide{
+    display: none;
+
+}
+
 
 @media only screen and (max-width: 767px) {
   h3{
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   .category_questions{
       margin-top: 2em;
+  }
+  .hide{
+      display: inline;   
+  }
+  .top{
+      margin-top:110px ;
+  }
+    .top2{
+        margin-top:80px ;    
   }
 }
 

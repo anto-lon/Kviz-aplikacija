@@ -36,7 +36,7 @@
       </div>
       <div class="btn">
         <b-button squared variant="warning" v-b-modal.modal-prevent-closing>Edit profile</b-button>
-        <b-button squared variant="warning">Scoreboard</b-button>
+        <b-button squared variant="warning" class="top">Scoreboard</b-button>
       </div>
     </div>
   </div>
@@ -235,11 +235,31 @@ h3, h5{
   .my-container{
 
     height: 1300px;
-    width: 440px;
+    width: 400px;
+
   }
   .my-row{
     border:solid 3px #ffd800; 
     height: 100%;
+  }
+}
+@media only screen and (max-width: 425px){
+  .my-container{
+
+    height: 1300px;
+    width: 280px;
+
+  }
+  .my-row{
+    border:solid 3px #ffd800; 
+    height: 100%;
+  }
+  .levels{
+    width: 250px;
+    height: auto;
+  }
+  .top{
+    margin-top: 5px;
   }
 }
 

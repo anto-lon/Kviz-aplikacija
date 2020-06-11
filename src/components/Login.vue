@@ -44,7 +44,7 @@
                     <b-button variant="warning" class="button " @click.prevent="login"> Submit</b-button>
                   </div><br><br>
                     <div class="sign">
-                      <p>New here?<a href="../register">Sign up.</a></p>
+                      <p>New here?<a><router-link to="/Register" class="text-black">Sign up.</router-link></a></p>
                     </div>
                 </b-form>
             </div> 

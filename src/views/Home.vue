@@ -9,8 +9,8 @@
                     </p>
                 </div>
                 <div class="button-section">
-                    <b-button  squared variant="outline-warning" >Getting started</b-button>
-                    <b-button  squared variant="warning" >Learn more</b-button>
+                    <b-button  squared variant="outline-warning" ><router-link to="/singleplayer" class="text-yellow">Getting started</router-link></b-button>
+                    <b-button  squared variant="warning" ><router-link to="/singleplayer" class="text-black">Learn more</router-link></b-button>
                 </div>
             </div>
             <div class="animation">
@@ -40,7 +40,7 @@
                         Some quick example text to build on the card title and make up the bulk of the card's content.
                       </b-card-text>
 
-                      <b-button href="/singleplayer" squared variant="warning" class="cardbtn">Play</b-button>
+                      <b-button squared variant="warning" class="cardbtn"><router-link to="/singleplayer" class="text">Play</router-link></b-button>
                     </b-card>    
                   </div>
                 </b-col>
@@ -61,7 +61,7 @@
                         Some quick example text to build on the card title and make up the bulk of the card's content.
                       </b-card-text>
 
-                      <b-button href="/login" squared variant="warning" class="cardbtn">Sign in</b-button>
+                      <b-button  squared variant="warning" class="cardbtn"><router-link to="/login" class="text">Sign in</router-link></b-button>
                     </b-card>    
                   </div>
                 </b-col>
@@ -80,7 +80,7 @@
                         Some quick example text to build on the card title and make up the bulk of the card's content.
                       </b-card-text>
 
-                      <b-button href="/about" squared variant="warning" class="cardbtn">More about</b-button>
+                      <b-button  squared variant="warning" class="cardbtn"><router-link to="/About" class="text">More about</router-link></b-button>
                     </b-card>    
                   </div>
                 </b-col>
@@ -221,6 +221,15 @@ export default {
 
   p {
     word-break: break-word;
+}
+.text{
+  color: white;
+}
+.text-black{
+  color:black;
+}
+.text-yellow{
+  color: #ffd800;
 }
 
 

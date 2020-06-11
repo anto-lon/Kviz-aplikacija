@@ -29,7 +29,7 @@
                     v-model="email"
                     type="email"
                     required
-                    placeholder="Enter email"
+                    placeholder="example@mail.com"
                   ></b-form-input>
 
                 </b-form-group>
@@ -44,7 +44,7 @@
                     <b-button variant="warning" class="button " @click.prevent="register"> Submit</b-button>
                   </div><br><br>
                   <div class="sign">
-                    <p>Already have account?<a href="../login">Sign in here.</a></p>
+                    <p>Already have account?<a ><router-link to="/Login" class="text-black">Sign in here.</router-link></a></p>
                   </div>
 
                 </b-form>
