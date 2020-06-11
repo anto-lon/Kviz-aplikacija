@@ -7,7 +7,7 @@
           <b-col class=".col-xs-6 .col-md-6">
             <div class="container">
               <img class="photo" src="..\assets\dashboard\siginl-side.png">
-              <div class="text" ><p> Ovo je  <br>sign up.</p></div>
+              <div class="text" ><p> Sign up for free </p></div>
             </div>
           </b-col>
         </div>
@@ -111,11 +111,6 @@ import firebase from 'firebase'
   text-align: center;
 }
 .signinbox{
- 
-  margin-top: 30px; 
-  margin-bottom: 50px; 
-  margin-left: 20px; 
-  margin-right: 70px;
   border:solid #ffd800 10px;
 }
 h1, .naslov{
@@ -152,10 +147,6 @@ padding: 30px;
     display: none;
   }
   .signinbox{
-  margin-top: 30px; 
-  margin-bottom: 50px; 
-  margin-left: 70px; 
-  margin-right: 70px;
   border:solid #ffd800 10px;
 }
 }

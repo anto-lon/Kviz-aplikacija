@@ -95,7 +95,7 @@
               <b-col md="6">
             
               <div class="card-us">
-                <b-card no-body class="overflow-hidden" style="max-width: 350px;">
+                <b-card no-body class="overflow-hidden" style="max-width: 270px;">
                   <b-row no-gutters>
                     <b-col md="6">
                       <b-card-img src="https://image.flaticon.com/icons/svg/2896/2896974.svg" alt="Image" class="rounded-0"  height="200px"></b-card-img>
@@ -103,8 +103,7 @@
                     <b-col md="6">
                       <b-card-body title="Stanko Bebek">
                         <b-card-text>
-                          This is a wider card with supporting text as a natural lead-in to additional content.
-                          This content is a little bit longer.
+                          Lorem ipsum...
                         </b-card-text>
                       </b-card-body>
                     </b-col>
@@ -116,7 +115,7 @@
                 <!--Second card about us-->
                 <b-col md="6">
             <div class="card-us">
-                <b-card no-body class="overflow-hidden" style="max-width: 350px;">
+                <b-card no-body class="overflow-hidden" style="max-width: 270px;">
                   <b-row no-gutters>
                     <b-col md="6">
                       <b-card-img src="https://image.flaticon.com/icons/svg/2897/2897014.svg" alt="Image" class="rounded-0" height="200px"></b-card-img>
@@ -124,8 +123,7 @@
                     <b-col md="6">
                       <b-card-body title="Antonio Lončar">
                         <b-card-text>
-                          This is a wider card with supporting text as a natural lead-in to additional content.
-                          This content is a little bit longer.
+                          Lorem ipsum...
                         </b-card-text>
                       </b-card-body>
                     </b-col>

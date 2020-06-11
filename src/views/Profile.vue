@@ -139,7 +139,7 @@ export default {
       },
       getAveragePoints(){
         if( this.total_played_games !== null){
-          return this.total_points / this.total_played_games
+          return Math.round(this.total_points / this.total_played_games)
         }else{
           return "Not played any games yet."
         }

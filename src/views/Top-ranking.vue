@@ -1,5 +1,12 @@
 <template>
   <div class="top_ranking">
+    <div class="update-info">
+      <p>If you dont see you'r name on the scoreboard, please update you'r profile info!</p>
+      <b-btn variant="primary">Update profile info</b-btn>
+    </div>
+
+    <hr />
+
     <b-container>
       <b-table striped hover :items="sortedItems"></b-table>
     </b-container>
@@ -40,11 +47,11 @@ import firebase  from 'firebase'
       firebase.firestore().collection('profiles').get()
       .then(quersSnapshot => {
         quersSnapshot.forEach(doc => {
-            if(doc.data().total_games_played >=1){
+            if(doc.data().total_games_played >=1 && doc.data().first_name !== null && doc.data().last_name !== null){
               const profile = {
               firstname: doc.data().first_name,
               lastname: doc.data().last_name,
-              avg_points: doc.data().total_points / doc.data().total_games_played
+              avg_points: Math.round(doc.data().total_points / doc.data().total_games_played)
             }
             this.items.push(profile)
           }
@@ -58,4 +65,27 @@ import firebase  from 'firebase'
 .top_ranking{
   margin-top: 3.5em;
 }
+
+.update-info{
+  display: grid;
+  place-items: center;
+  margin-bottom: 2em;
+}
+
+.update-info p{
+  font-size: 22px; 
+}
+
+@media only screen and (max-width: 760px){
+      .update-info{
+        margin-top: 5em;
+      }
+
+     .update-info p{
+      font-size: 12px;
+      text-align: center; 
+    }
+
+     
+ }
 </style>
